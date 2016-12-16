@@ -1,0 +1,9 @@
+import threading
+i=0
+_uid = threading.local()
+def genuid():
+    if getattr(_uid, "uid", None) is None:
+        _uid.tid = threading.current_thread().ident
+        _uid.uid = 0
+    _uid.uid += 1
+    return (_uid.tid, _uid.uid)

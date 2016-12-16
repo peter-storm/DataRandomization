@@ -1,0 +1,14 @@
+import random
+import math
+class Test:
+     def __init__(self, r = None):
+             if r is None:
+                 r = random.randrange(0, math.pow(2,128)-1)
+             self.r = r
+             print self.r
+
+# The above assigns a random value to attribute "r", the random value is defined in the randrange function
+
+x = Test()
+y = Test()
+
